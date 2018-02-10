@@ -191,12 +191,12 @@ p {
 
 /* Section D / Boxes */
 
-#section-d .box {
+#section-d .box, #section-h .box {
 	padding: 2em;
 	color: #fff;
 }
 
-#section-d .box:first-child {
+#section-d .box:first-child, #section-h .box:first-child {
 	background: #2690d4;
 }
 
@@ -208,6 +208,41 @@ p {
     color: black;
     padding: 2em;
 }
+
+/* Section F */
+
+#section-f {
+    background-color: white;
+    color: black;
+    padding: 2em;
+}
+
+
+#section-g {
+    background-color: #ccc;;
+    color: black;
+    padding: 2em;
+}
+
+
+/* Section Menu / Boxes */
+
+#section-menu .box {
+	padding: 2em;
+	color: #fff;
+}
+
+#section-menu .box:first-child {
+	background: #2690d4;
+}
+
+
+
+
+
+
+
+
 
 /* Footer */
 
@@ -222,6 +257,69 @@ p {
 	color: #2690d4;
 	text-decoration: none;
 }
+
+
+
+/* CSS only show hide */
+input {
+  visibility: hidden;
+}
+
+input[type=checkbox]:checked + div {
+  transition: all 1s;
+  height: auto;
+  opacity: 1;
+}
+
+input[type=checkbox]:checked + div p {
+  height: auto;
+  opacity: 1;
+}
+
+input:before {
+  /* font-family: FontAwesome; */
+  /* content: "\f0fe"; */
+  content: "\002295";
+  position: absolute;
+  left: 15px;
+  visibility: visible;
+}
+
+input[type=checkbox]:checked:before {
+  /* content: "\f146"; */
+  content: "\002296";
+}
+
+label h3 {
+  display: inline-block;
+  position: relative;
+  left: 25px;
+}
+
+.answer,
+.answer p {
+  height: 0;
+  opacity: 0;
+  transition: all 0.2s;
+  overflow: hidden;
+}
+/* CSS only show hide */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* FIRST BREAKPOINT (MEDIUM SIZE) */
@@ -276,6 +374,37 @@ p {
 	#top-header p {
 		margin-top: 3em;
 	}
+    
+	#section-f h2 {
+		padding-top: 2em;
+	}
+	#section-f .content-text {
+		columns: 1;
+		column-gap: 2em;
+	}
+	#section-f .content-text p {
+		padding-top: 0;
+	}
+    
+    
+	.box-menu {
+		grid-column: span 4;
+	}
+    
+    
+    #menu1 {
+        cursor: pointer;
+    }
+    
+    #menu-1-list {
+        text-align: left;
+        padding: 2em;
+    }
+    
+    #menu-1-list p{
+        color: white;
+    }
+    
 	header {
 		background-color: white;
 		position: fixed;
