@@ -1,0 +1,507 @@
+/* Core Styles */
+
+html,
+body {
+	max-width: 100%;
+	overflow-x: hidden;
+}
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: Arial, Helvetica, sans-serif;
+	background: #333;
+	color: #fff;
+	font-size: 1.1em;
+	line-height: 1.5;
+	text-align: center;
+}
+
+header {
+        background-color: white;
+}
+
+
+.login-register {
+    list-style-type: none;
+        background-color: white;
+    text-align: left;
+    width: 100%;
+    margin: 0 1em;
+    padding: 1em 0;
+}
+
+.login-register a {
+    color: black;
+    text-align: center;
+}
+
+nav {
+	display: none;
+}
+
+nav a {
+	padding: 1em;
+	display: block;
+}
+
+#menu {
+	padding: 1em;
+	background: #fff;
+	display: block;
+    text-align: right;
+    margin-top: -3em;
+}
+
+.show-menu {
+	display: block;
+    /*text-align: left; */
+}
+
+a {
+  color: black;
+  text-decoration: none;
+}
+
+.dropdown {
+  border-top: solid white;
+  margin-left: -40px;
+}
+
+.mainnav:hover,
+.dropdown-content a:hover {
+  color: red;
+  transition: all 0.8s;
+}
+
+.dropdown:hover,
+li a:hover {
+    text-decoration-line: underline;
+}
+
+.dropdown-content {
+  display: none;
+  /* Hides second level menu -on click it appears */
+}
+
+.dropdown:hover .dropdown-content {
+  margin-top: 13px;
+  display: block;
+  text-align: center;
+  padding: 10px 14px;
+  list-style-type: none;
+  cursor: pointer;
+}
+
+img {
+	display: block;
+	width: 100%;
+	height: auto;
+}
+
+h1,
+h2,
+h3 {
+	margin: 0;
+	padding: 1em 0;
+}
+
+p {
+	margin: 0;
+	padding: 1em 0;
+}
+
+
+/* Header top-header */
+
+#top-header {
+	min-height: 550px;
+	color: #fff;
+	text-align: center;
+    margin-top: -1em;
+}
+
+#top-header .bg-image {
+	position: absolute;
+	background: #333 url("https://static.pexels.com/photos/248515/pexels-photo-248515.png");
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 550px;
+	z-index: -1;
+	opacity: 0.4;
+}
+
+#top-header h1 {
+	padding-top: 4.5em;
+	padding-bottom: 0;
+}
+
+	#top-header p {
+		margin-top: 3em;
+	}
+
+#top-header .content-wrap,
+#section-a .content-wrap {
+	padding: 0 1.5em;
+}
+
+
+/* Section A */
+
+#section-a {
+	background: #eaeaea;
+	color: #333;
+	padding-bottom: 2em;
+}
+
+
+/* Section B */
+
+#section-b {
+	padding: 2em 1em 1em;
+}
+
+#section-b ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#section-b li {
+	margin-bottom: 1em;
+	background: #fff;
+	color: #333;
+}
+
+.card-content {
+	padding: 1.5em;
+}
+
+
+/* Section C */
+
+#section-c {
+	background: #fff;
+	color: #333;
+	padding: 2em;
+}
+
+
+/* Section D / Boxes */
+
+#section-d .box {
+	padding: 2em;
+	color: #fff;
+}
+
+#section-d .box:first-child {
+	background: #2690d4;
+}
+
+
+/* Section E */
+
+#section-e {
+    background-color: white;
+    color: black;
+    padding: 2em;
+}
+
+/* Footer */
+
+#main-footer {
+	padding: 2em;
+	background: #000;
+	color: #fff;
+	text-align: center;
+}
+
+#main-footer a {
+	color: #2690d4;
+	text-decoration: none;
+}
+
+
+/* FIRST BREAKPOINT (MEDIUM SIZE) */
+
+@media screen and (min-width: 500px) {
+	nav a {
+		width: 44%;
+		display: inline-block;
+	}
+	nav a:hover {
+		background: #777;
+	}
+}
+
+
+/* END FIRST BREAKPOINT */
+
+
+/* SECOND BREAKPOINT (DESKTOP SIZE) */
+
+@media screen and (min-width: 1000px) {
+	.grid {
+		display: grid;
+		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
+	}
+	#section-a h2 {
+		padding-top: 2em;
+	}
+	#section-a .content-text {
+		columns: 2;
+		column-gap: 2em;
+	}
+	#section-a .content-text p {
+		padding-top: 0;
+	}
+	.content-wrap,
+	#section-b ul {
+		grid-column: 2/4;
+	}
+	.box,
+	#main-footer div {
+		grid-column: span 2;
+	}
+	#section-b ul {
+		display: flex;
+		justify-content: space-around;
+	}
+	#section-b li {
+		width: 31%;
+	}
+	#top-header h1,
+	#top-header p {
+		margin-top: 3em;
+	}
+	header {
+		background-color: white;
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 45px;
+	}
+	header ul {
+		display: inline;
+	}
+	.login-register {
+		list-style-type: none;
+		padding: 0;
+		margin: 0;
+	}
+	.login-register a {
+		display: block;
+		text-align: right;
+		color: black;
+		padding-right: 1em;
+	}
+	nav {
+		display: block;
+		background-color: white;
+		margin-top: -2em;
+	}
+	nav a {
+		line-height: 3em;
+		width: inherit;
+		padding: 0em;
+	}
+	#menu {
+		display: none;
+	}
+	nav ul {
+		margin: 0;
+		/* removes default margin and padding */
+		padding: 0;
+		list-style-type: none;
+		/* removes all default list bullet points */
+		text-align: center;
+	}
+	nav li {
+		display: inline-block;
+		/* makes the main menu items line up horizontally */
+		position: relative;
+		/* sets the positioning context for dropdowns */
+		background: #ccc;
+		margin-right: -4px;
+		/* closes up the annoying spaces when li elements are on separate lines */
+		border-right: 2px solid rgba(237, 237, 237, .9);
+		/* add your own divisions between menu items */
+		;
+	}
+	nav li:last-child {
+		border-right: none;
+		/* removes the border from the last main menu item only */
+		;
+	}
+	nav ul a:link,
+	nav ul a:visited {
+		height: 2em;
+		display: inline-block;
+		/* makes 'a' tags accept block styles */
+		line-height: 2em;
+		/* vertically centres each (single-line) menu item */
+		width: 12em;
+		/* makes menu items all the same width */
+		text-align: center;
+		color: #333;
+		/* changes the default blue/purple link colors */
+		text-decoration: none;
+		/* removes the default link underline */
+		;
+	}
+	nav a:hover {
+		background: #aaa;
+	}
+	/* styles for the submenu only (lists inside lists): */
+	ul ul {
+		display: none;
+		/* hides the dropdown */
+		position: absolute;
+		/* sets the position of the dropdown to sit under the main menu item */
+		;
+	}
+	ul li:hover ul {
+		display: block;
+		/* shows the dropdown on hover */
+		;
+	}
+	ul ul li {
+		display: block;
+		/* makes the dropdwon menu items stack up vertically */
+		background: rgba(200, 200, 200, .9);
+		/* makes the dropdown slightly translucent */
+		border: none;
+		/* removes the right border set under the main menu */
+		border-bottom: 2px solid rgba(237, 237, 237, .9);
+		/* adds divisions between dropdown menu items */
+		;
+	}
+	ul ul li:first-child {
+		border-top: 2px solid rgba(237, 237, 237, .9);
+		/* adds top border to first dropdown menu item only */
+		;
+	}
+	ul ul li:last-child {
+		border-bottom: none;
+		/* removes the bottom border only from the last dropdown menu item */
+		;
+	}
+    
+     .mainnav {
+    margin-top: -0.5em;
+    margin-bottom: -1em;
+  }
+    
+  .dropdown:hover .dropdown-content {
+    margin-top: -10px;
+    /* Rid of spacing between first level and second level */
+  }
+    
+  /* Modified from https://codepen.io/jurbank/pen/veGnb */
+  .secondlevel a:hover {
+    box-shadow: none;
+  }
+    
+  .dropdown {
+    display: block;
+    margin-left: 0;
+    padding: 0;
+    text-align: left;
+  }
+    
+  #nav-menu ul li {
+    margin-left: 0px;
+    border: none;
+    padding-bottom: 0;
+    padding-top: 0;
+    box-shadow: none;
+    /* Hides raised box-shadow */
+  }
+    
+  .mainnav:hover,
+  .dropdown-content a:hover {
+    transition: none;
+  }
+    
+  nav a {
+    text-decoration: none;
+    color: #fff;
+    display: block;
+    font-size: 16px;
+    box-shadow: none;
+  }
+    
+  nav li {
+    float: left;
+  }
+    
+  nav ul:after {
+    clear: both;
+  }
+    
+  nav ul:before,
+  nav ul:after {
+    content: " ";
+    display: table;
+  }
+    
+  ul.firstlevel li a {
+    display: block;
+    border-right: 1px solid #fff;
+    padding-left: 3em;
+  }
+    
+  .secondlevel {
+    position: absolute;
+  }
+    
+  ul.secondlevel li {
+    float: none;
+    margin: 0;
+    text-align: left;
+  }
+    
+  ul.secondlevel li a {
+    border-right: none;
+    /* Removes white border */
+    margin-left: -40px;
+  }
+    
+  ul.firstlevel li:hover ul {
+    display: block;
+    background: #fff;
+    width: 25%;
+    margin-left: -15px;
+    /* Align second level with first level */
+  }
+    
+  #firstmenu {
+    margin-left: -60px;
+    /* Align second level with first level for first menu */
+  }
+    
+  /* keeps the tab background white */
+  ul.firstlevel li:hover a {
+    background: #fff;
+    color: #00BD9D;
+    text-shadow: none;
+  }
+    
+  ul.firstlevel li:hover>a {
+    color: #00BD9D;
+    background-color: #fff;
+  }
+    
+  ul.secondlevel li:hover>a {
+    background-color: #ccc;
+    width: 337px;
+  }
+    
+}
+
+
+/* END SECOND BREAKPOINT */

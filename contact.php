@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>basic responsive example</title>
+      <link rel="stylesheet" href="css/style.css">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   </head>
+   <body>
+      <!-- Header -->
+      <header>
+       <!-- <h1><a href="index.html">Business Name</a></h1> -->
+         <ul class="login-register">
+            <li><a href="registration.php">Register</a></li>
+            <li><a href="login.php">Log In</a></li>
+         </ul>
+          <div class="fixedtopbar">
+         <a id="menu" href="#">Menu</a>
+         <nav id="nav-menu">
+            <!-- uses nested lists for submenus -->
+            <ul class="firstlevel">
+               <li><a href="index.php">Home</a></li>
+               <li><a href="about.php">About Us</a></li>
+                  <!-- first submenu starts here -->
+            <li class="dropdown">
+              <a class="mainnav" id="menulink" href="menu.php">Menu</a>
+              <div class="dropdown-content">
+                <ul class="secondlevel">
+                  <li><a href="turtles.html#OO2">Menu one</a></li>
+                  <li><a href="turtles.html#OO2">Menu two</a></li>
+                  <li><a href="turtles.html#D3">Menu three</a></li>
+                </ul>
+              </div>
+            </li>
+               <!-- first submenu ends here -->
+               <li><a href="contact.php">Contact Us</a>
+               </li>                
+            </ul>
+         </nav>
+          </div>
+      </header>
+      <div id="top-header" class="grid">
+         <div class="bg-image"></div>
+         <div class="content-wrap">
+            <h1>Online Lunch Delivery System</h1>
+            <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Adipisci eum error earum soluta voluptatum nisi laboriosam eos saepe asperiores dolorum</p>
+         </div>
+      </div>
+      <!-- Main Area -->
+      <main id="main">
+         <!-- Section A -->
+         <section id="section-a" class="grid">
+            <div class="content-wrap">
+               <h2 class="content-title">Who are we?</h2>
+               <div class="content-text">
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Saepe sint eligendi possimus? Unde officiis magnam laborum ipsa distinctio odio, vero dolores dicta aliquam aperiam repellendus. Perferendis officiis deserunt velit voluptas nobis sequi
+                     animi totam, accusantium, ex eius quia, natus quo?
+                  </p>
+               </div>
+            </div>
+         </section>
+         <!-- Section B -->
+          <section id="section-b-title" class="grid">
+                                      <h2 class="content-title">How to order?</h2>
+</section>
+          
+         <section id="section-b" class="grid">
+            <ul>
+               <li>
+                  <div class="card">
+                     <img src="https://static.pexels.com/photos/574077/pexels-photo-574077.jpeg" alt="">
+                     <div class="card-content">
+                        <h3 class="card-title">Join Us</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="card">
+                     <img src="https://static.pexels.com/photos/261628/pexels-photo-261628.jpeg" alt="">
+                     <div class="card-content">
+                        <h3 class="card-title">Delicious Food</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
+                     </div>
+                  </div>
+               </li>
+               <li>
+                  <div class="card">
+                     <img src="https://static.pexels.com/photos/265087/pexels-photo-265087.jpeg" alt="">
+                     <div class="card-content">
+                        <h3 class="card-title">Get it delivered</h3>
+                        <p>Lorem ipsum dolor sit amet consectetu
+                            r adipisicing elit. Nostrum culpa neque quo eum et quasi velit voluptatum cum maiores exercitationem.</p>
+                     </div>
+                  </div>
+               </li>
+            </ul>
+         </section>
+         <!-- Section C -->
+         <section id="section-c" class="grid">
+            <div class="content-wrap">
+               <p>Cool Food Quote in blockquote</p>
+            </div>
+         </section>
+         <!-- Section D -->
+         <section id="section-d" class="grid">
+            <div class="box">
+               <h2 class="content-title">Contact Us</h2>
+               <p>You can contact us using our form found here!</p>
+            </div>
+            <div class="box">
+               <h2 class="content-title">Our Story</h2>
+               <p>Want to hear our journey .... Read More button </p>
+            </div>
+         </section>
+                  <section id="section-e" class="grid">
+            <div class="content-wrap">
+               <p>section e - Add pictures</p>
+            </div>
+         </section>
+      </main>
+      <!-- Footer -->
+      <footer id="main-footer" class="grid">
+         <div>Business name</div>
+         <div>Project By Amina Lunat</div>
+          <div>Social Media Icons</div>
+      </footer>
+      <script src="javascript/scripts.js"></script>
+   </body>
+</html>
