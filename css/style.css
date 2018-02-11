@@ -150,7 +150,7 @@ p {
 
 /* Section A */
 
-#section-a {
+#section-a, #menu-1-list {
 	background: #eaeaea;
 	color: #333;
 	padding-bottom: 2em;
@@ -219,7 +219,7 @@ p {
 
 
 #section-g {
-    background-color: #ccc;;
+    background-color: #ccc;
     color: black;
     padding: 2em;
 }
@@ -227,22 +227,10 @@ p {
 
 /* Section Menu / Boxes */
 
-#section-menu .box {
-	padding: 2em;
-	color: #fff;
+#section-menu-1 {
+    background-color: black;
+    color: black;
 }
-
-#section-menu .box:first-child {
-	background: #2690d4;
-}
-
-
-
-
-
-
-
-
 
 /* Footer */
 
@@ -261,7 +249,7 @@ p {
 
 
 /* CSS only show hide */
-input {
+#body-menu input {
   visibility: hidden;
 }
 
@@ -279,23 +267,28 @@ input[type=checkbox]:checked + div p {
 input:before {
   /* font-family: FontAwesome; */
   /* content: "\f0fe"; */
-  content: "\002295";
+  content: "\002295"; /* HTML character code for circle plus */
   position: absolute;
   left: 15px;
-  visibility: visible;
+  bottom: 5px;
+  visibility: hidden;
 }
 
 input[type=checkbox]:checked:before {
   /* content: "\f146"; */
-  content: "\002296";
+  content: "\002296"; /* HTML character code for circle minus */
 }
 
 label h3 {
   display: inline-block;
   position: relative;
-  left: 25px;
+  margin-left: -1em;
 }
 
+label h3:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
 .answer,
 .answer p {
   height: 0;
@@ -306,19 +299,41 @@ label h3 {
 /* CSS only show hide */
 
 
+.container {
+    visibility: visible;
+    width: 70%;
+}
 
 
+.container input[type=text], .container select, .container textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
 
+.container input[type=submit] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
 
+.container input[type=submit]:hover {
+    background-color: #45a049;
+}
 
-
-
-
-
-
-
-
-
+.container {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    padding: 20px;
+}
 
 
 
@@ -345,18 +360,18 @@ label h3 {
 		display: grid;
 		grid-template-columns: 1fr repeat(2, minmax(auto, 25em)) 1fr;
 	}
-	#section-a h2 {
+	#section-a h2,  {
 		padding-top: 2em;
 	}
-	#section-a .content-text {
+	#section-a .content-text, #menu-1-list .content-text {
 		columns: 2;
 		column-gap: 2em;
 	}
-	#section-a .content-text p {
+	#section-a .content-text p, #menu-1-list .content-text p {
 		padding-top: 0;
 	}
 	.content-wrap,
-	#section-b ul {
+	#section-b ul, #menu-1-list .content-text {
 		grid-column: 2/4;
 	}
 	.box,
@@ -385,15 +400,34 @@ label h3 {
 	#section-f .content-text p {
 		padding-top: 0;
 	}
-    
+
+    .menu-cart {
+        float: right;
+        text-align: center;
+        width: 20%;
+        border: solid 1px black;
+    }
+
+    #menu-1-list p {
+        width: 70%;
+    }
     
 	.box-menu {
 		grid-column: span 4;
 	}
     
     
+    #section-menu-3 {
+        background-color: white;
+        color: black;
+    }
+    
     #menu1 {
         cursor: pointer;
+    }
+    
+    .menu-1 p {
+    color: red;
     }
     
     #menu-1-list {
@@ -401,8 +435,21 @@ label h3 {
         padding: 2em;
     }
     
-    #menu-1-list p{
-        color: white;
+    
+    #menu-1-list {
+        border: solid 1px black;
+    }
+    
+    
+    #section-menu-1 {
+    background-color: #eee;
+    color: black;
+    }
+    
+    
+    #section-menu-2 {
+    background-color: black;
+    color: white;
     }
     
 	header {
